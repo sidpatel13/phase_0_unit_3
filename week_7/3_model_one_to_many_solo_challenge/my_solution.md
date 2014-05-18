@@ -4,7 +4,7 @@
 <!-- Identify the fields Twitter collects data for -->
 
 ## Release 1: Tweet Fields
-<!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? --> Text which constitutes a tweet. The date and time of the tweet.
+<!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? --> Text which constitutes a tweet. The date and time of the tweet. Twitter handle for the person making the tweet.
 
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 

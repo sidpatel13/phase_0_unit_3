@@ -59,4 +59,25 @@ id          first_name  last_name   email                  created_at           
 
 
 ## Release 5: Reflect
-<!-- Add your reflection here -->
+What parts of your strategy worked? What problems did you face?
+I think the main strategy was to follow each of the steps and google the terms that I was being asked to do along the way. So I saw some examples on how to user ALTER and UPDATE.
+I think finding examples that made sense and I can use was a little difficult.
+
+What questions did you have while coding? What resources did you find to help you answer them?
+I used stackoverflow to look up how to use ALTER and UPDATE.
+
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+None
+
+Did you learn any new skills or tricks?
+Yes I learned how to add columns to an existing database and how to add values to those columns.
+
+How confident are you with each of the Learning Competencies?
+Very confident.
+
+Which parts of the challenge did you enjoy?
+Making changes to the database using command line.
+
+
+Which parts of the challenge did you find tedious?
+None

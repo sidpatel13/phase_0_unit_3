@@ -41,3 +41,23 @@ WHERE tweet_id = (enter any tweet id here)
 
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
+What parts of your strategy worked? What problems did you face?
+I think it really helped that I went through the sql zoo challenge. That really made this challenge a lot easier. I first answered the questions and created the schema. The queries were relatively straight forward.
+
+What questions did you have while coding? What resources did you find to help you answer them?
+None
+
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+None pertaining to this.
+
+Did you learn any new skills or tricks?
+Got better at using sql join.
+
+How confident are you with each of the Learning Competencies?
+Very confident.
+
+Which parts of the challenge did you enjoy?
+All of them.
+
+Which parts of the challenge did you find tedious?
+None, it was a fun challenge!

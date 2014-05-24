@@ -123,3 +123,36 @@ sid_list.add(chicken)
 sid_list.add(steak)
 sid_list.view('meat')
 # sid_list.view
+
+=begin
+ What parts of your strategy worked? What problems did you face?
+ I think initially I was creating a list class with an item already inside it. As I got in further into my pseudocode I realized I needed to create another item class. 
+ I learned how driver code can be used to insert the item class into the list class.
+ 
+ What questions did you have while coding? What resources did you find to help you answer them?
+ It had been a while since I used attr_reader, so I wanted to know what we can do with such a command. I learned attr_reader :name is the equivalent of having to type def name....and write everything out.
+ When you use driver code "item = Item.new("apples","fruit")" you are also inputting a method "name" which is "apples". When you create a new list, "sid_list" and use methods ".name" and ".category" in 
+ the List class, it knows you are referring to the methods in the Item class. You join the two classes by typing "sid_list.add(item)". It adds the item to the list.
+ 
+ So understanding how to use driver code properly like this was something I had a question about.
+ 
+ What concepts are you having trouble with, or did you just figure something out? If so, what?
+ Understanding this logic of how each class is supposed to show a set of behaviors that can be combined with another class's behaviors and attributes to give an object its functionality was important.
+ 
+ Did you learn any new skills or tricks?
+ I learned how to combine classes and write driver code to make this happen.
+ 
+ 
+ 
+ How confident are you with each of the Learning Competencies?
+ Very confident.
+ 
+ 
+ Which parts of the challenge did you enjoy?
+ I think creating the classes according the user story was a lot of fun.
+ 
+ 
+ Which parts of the challenge did you find tedious?
+ None really.
+
+=end

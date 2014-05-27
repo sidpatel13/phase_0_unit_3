@@ -22,7 +22,6 @@ id          first_name  last_name   email                  created_at           
 
 ## Release 2: Multi-line commands
 <!-- paste your terminal output here -->
-Error: UNIQUE constraint failed: users.email
 sqlite> SELECT * FROM USERS
    ...> ;
 id          first_name  last_name   email                  created_at           updated_at         

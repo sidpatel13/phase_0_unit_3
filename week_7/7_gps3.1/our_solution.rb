@@ -81,9 +81,11 @@ class List
                   puts "#{item.name} #{item.checked}"
                 end    
             end
-          else
+            when "all"
             @list.each do |item|
+                if item.category == "all"
                 puts "#{item.name} #{item.checked}"
+                end
             end
 
         end
@@ -121,8 +123,8 @@ sid_list.add(item)
 #sid_list.remove(item)
 sid_list.add(chicken)
 sid_list.add(steak)
-sid_list.view('meat')
-# sid_list.view
+#sid_list.view('meat')
+sid_list.view
 
 =begin
  What parts of your strategy worked? What problems did you face?

@@ -31,22 +31,23 @@ end
 
 
 # 3. Initial Solution
-=begin
+
 def is_fibonacci?(num)
-    array = [0..num]
+    array = (0..num).to_a
     counter = 0
     fib = []
       while counter < array.length
           if array[counter] == array[counter-1] + array[counter-2]
             fib << array[counter]
           end
+        counter += 1
       end
-        fib.include?(num)
+    fib.include?(num)
 end
-=end
 
 
 
+=begin
 def is_fibonacci?(num)
     array = (0..num).to_a
     fib = []
@@ -57,6 +58,7 @@ def is_fibonacci?(num)
     end
     fib.include?(num)
 end
+=end
 
 
 # 4. Refactored Solution

@@ -26,10 +26,40 @@ var scores = [ [80, 70, 70, 100],
 // __________________________________________
 // Write your code below.
 
+function average(array) {
+  var total = 0;
+    for(i = 0; i < array.length; i++) {
+        total += array[i];
+    }
+    return total/(array.length);
+  }
 
+//console.log(average([80,60,50,40]));
 
+var gradebook = {}
 
+gradebook.Joseph = {}
+gradebook.Susan = {}
+gradebook.William = {}
+gradebook.Elizabeth = {}
 
+gradebook.Joseph.testScores = scores[0]
+gradebook.Susan.testScores = scores[1]
+gradebook.William.testScores = scores[2]
+gradebook.Elizabeth.testScores = scores[3]
+
+gradebook.addScore = function(name,score) {
+  gradebook[name].testScores.push(score);
+}
+
+//gradebook.addScore("Joseph", 95);
+//console.log(gradebook.Joseph.testScores);
+
+gradebook.getAverage = function(name) {
+  return average(gradebook[name].testScores);
+}
+
+//console.log(gradebook.getAverage("Joseph"));
 
 // __________________________________________
 // Refactored Solution

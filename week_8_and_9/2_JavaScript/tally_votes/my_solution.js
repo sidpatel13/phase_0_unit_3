@@ -40,6 +40,99 @@ var voteCount = {
   treasurer: {}
 }
 
+
+for (var voter in votes) {
+  var voter_choices = votes[voter];
+  for (var position in voter_choices) {
+     if (voteCount[position].hasOwnProperty(voter_choices[position]))
+      voteCount[position][voter_choices[position]] += 1;
+     else 
+      voteCount[position][voter_choices[position]] = 1;
+
+  }
+
+}
+
+
+
+
+  // var president_vote = voter_names.president;
+  // var vicePresident_vote = voter_names.vicePresident;
+  // var secretary_vote = voter_names.vicePresident;
+  // var treasurer_vote = voter_names.treasurer;
+  // voteCount.president = president_vote;
+  // voteCount.vicePresident = vicePresident_vote;
+  // voteCount.secretary = secretary_vote;
+  // voteCount.treasurer =  treasurer_vote;
+  //  for (var key in voteCount) {
+
+  //   if voteCount[key] 
+
+  //  }
+
+
+
+  //console.log(voteCount.president);
+ 
+
+// var count = 1;
+// for (var voter in votes) {
+//   var voter_names = votes[voter_names];
+//     for (var position in voter_names) {
+//        voteCount.president = position.president;
+//        if position.president in voteCount.president
+//           then  voteCount.president = {position.president: count += 1};
+//        else voteCount.president = {position.president: count};
+
+//     }
+// } 
+
+
+// for (var voter in votes) {
+//   var voter_names = votes[voter_names];
+//   for (var position in voter_names) {
+//     voteCount.president.push(voter_names.president)
+//           if voter_names.president in voteCount.president 
+//             then votecount.president.voter_names.president += 1
+//           else votecount.president.voter_names.president = 1
+
+
+//      // "name" = "voter_names.position";
+//      // if ("name" in voteCount.president)
+//      //    then count += 1 
+// }
+// voteCount.president = {"name":president_count}
+// // 
+// for (var voter in votes) {
+//   var voter_names = votes[voter_names];
+//   for (var position in voter_names) {
+//     if voter_names.president === 'undefined' {
+//       voteCount
+//     }
+    
+//   }
+
+// }
+
+// for(var i = 0; i < array.length; i++) {
+//         solo[array[i]] = (solo[array[i]] || 0) + 1;
+//     } 
+
+
+
+// voteCount.president = function(vote_name) {
+//    for (var voter in votes) {
+//      var voter_names = votes[voter_names];
+//   for (var position in voter_names) {
+//     if voteCount.president[vote_name] 
+    
+//   }
+
+// }
+
+
+
+
 /* The name of each student receiving a vote for an office should become a property 
 of the respective office in voteCount.  After Alex's votes have been tallied, 
 voteCount would be ...

@@ -2,6 +2,29 @@
 
 // I worked on this challenge [by myself, with:]
 
+
+// Pseudocode
+
+// var count = 0;
+// for (var voter in votes) {
+//   var voter_names = votes[voter_names];
+//     for (var position in voter_names) {
+//        voteCount.president = position.president;
+//        if position.president in voteCount.president
+//           then  voteCount.president = {position.president: count += 1};
+//        else voteCount.president = {position.president: count};
+
+//     }
+// } 
+
+
+// for (var voter in votes) {
+//   var voter_names = votes[voter_names];
+//   for (var position in voter_names) {
+//     if voter_names.president === 'undefined' { << should not be a string
+//       voteCount
+//     }
+
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
   "Alex": { president: "Bob", vicePresident: "Devin", secretary: "Gail", treasurer: "Kerry" },
@@ -41,95 +64,6 @@ var voteCount = {
 }
 
 
-for (var voter in votes) {
-  var voter_choices = votes[voter];
-  for (var position in voter_choices) {
-     if (voteCount[position].hasOwnProperty(voter_choices[position]))
-      voteCount[position][voter_choices[position]] += 1;
-     else 
-      voteCount[position][voter_choices[position]] = 1;
-
-  }
-
-}
-
-
-
-
-  // var president_vote = voter_names.president;
-  // var vicePresident_vote = voter_names.vicePresident;
-  // var secretary_vote = voter_names.vicePresident;
-  // var treasurer_vote = voter_names.treasurer;
-  // voteCount.president = president_vote;
-  // voteCount.vicePresident = vicePresident_vote;
-  // voteCount.secretary = secretary_vote;
-  // voteCount.treasurer =  treasurer_vote;
-  //  for (var key in voteCount) {
-
-  //   if voteCount[key] 
-
-  //  }
-
-
-
-  //console.log(voteCount.president);
- 
-
-// var count = 1;
-// for (var voter in votes) {
-//   var voter_names = votes[voter_names];
-//     for (var position in voter_names) {
-//        voteCount.president = position.president;
-//        if position.president in voteCount.president
-//           then  voteCount.president = {position.president: count += 1};
-//        else voteCount.president = {position.president: count};
-
-//     }
-// } 
-
-
-// for (var voter in votes) {
-//   var voter_names = votes[voter_names];
-//   for (var position in voter_names) {
-//     voteCount.president.push(voter_names.president)
-//           if voter_names.president in voteCount.president 
-//             then votecount.president.voter_names.president += 1
-//           else votecount.president.voter_names.president = 1
-
-
-//      // "name" = "voter_names.position";
-//      // if ("name" in voteCount.president)
-//      //    then count += 1 
-// }
-// voteCount.president = {"name":president_count}
-// // 
-// for (var voter in votes) {
-//   var voter_names = votes[voter_names];
-//   for (var position in voter_names) {
-//     if voter_names.president === 'undefined' {
-//       voteCount
-//     }
-    
-//   }
-
-// }
-
-// for(var i = 0; i < array.length; i++) {
-//         solo[array[i]] = (solo[array[i]] || 0) + 1;
-//     } 
-
-
-
-// voteCount.president = function(vote_name) {
-//    for (var voter in votes) {
-//      var voter_names = votes[voter_names];
-//   for (var position in voter_names) {
-//     if voteCount.president[vote_name] 
-    
-//   }
-
-// }
-
 
 
 
@@ -149,20 +83,46 @@ voteCount would be ...
 
 /* Once the votes have been tallied, assign each officer position the name of the 
 student who received the most votes. */
+
 var officers = {
   president: undefined,
   vicePresident: undefined,
   secretary: undefined,
   treasurer: undefined
 }
-
-// Pseudocode
+ 
 
 
 // __________________________________________
 // Initial Solution
 
 
+// for (var voter in votes) {
+//   var voter_choices = votes[voter];
+//   for (var position in voter_choices) {
+//      if (voteCount[position].hasOwnProperty(voter_choices[position]))
+//       voteCount[position][voter_choices[position]] += 1;
+//      else 
+//       voteCount[position][voter_choices[position]] = 1;
+
+//   }
+
+// }
+
+
+// for (position in voteCount) {
+//   max = 0;
+//   elected = "";
+//   final_tally = voteCount[position];
+//     for (winner in final_tally) {
+//         if (final_tally[winner] > max ) {
+//          max = final_tally[winner];
+//          elected = winner;
+//         }
+//      }
+
+//     officers[position] = elected;
+// } 
 
 
 
@@ -172,6 +132,30 @@ var officers = {
 // Refactored Solution
 
 
+for (var voter in votes) {
+  for (var position in votes[voter]) {
+     if (voteCount[position].hasOwnProperty(votes[voter][position]))
+      voteCount[position][votes[voter][position]] += 1;
+     else 
+      voteCount[position][votes[voter][position]] = 1;
+
+  }
+
+}
+
+
+for (position in voteCount) {
+  max = 0;
+  elected = "";
+    for (winner in voteCount[position]) {
+        if (voteCount[position][winner] > max ) {
+         max = voteCount[position][winner];
+         elected = winner;
+        }
+     }
+
+    officers[position] = elected;
+} 
 
 
 

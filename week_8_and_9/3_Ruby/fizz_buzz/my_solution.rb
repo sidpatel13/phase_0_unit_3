@@ -6,16 +6,18 @@
 # 2. Pseudocode
 =begin
  def super_fizzbuzz(array)
+  new_array = array
    array.each do |i|
      if i % 3 == 0 && i % 5 == 0
-        i == "FizzBuzz"
+        new_array == "FizzBuzz"
      elsif i % 3 == 0
-        i == "Buzz"
+        new_array == "Buzz"
      elsif i % 5 == 0
-        i == "Fizz"
-     else i
+        new_array == "Fizz"
+     else new_array == i
      end
    end
+  new_array
  end
  
 
@@ -25,22 +27,22 @@
 # 3. Initial Solution
 
 def super_fizzbuzz(array)
+  new_array =[]
   array.each do |i|
     if i % 3 == 0 && i % 5 == 0
-        i.to_s.replace "FizzBuzz"
+        new_array << "FizzBuzz"
     elsif i % 3 == 0
-        i.replace "Fizz"
+        new_array << "Fizz"
     elsif i % 5 == 0
-        i.replace "Buzz"
+        new_array << "Buzz"
+    else 
+        new_array << i
     end
-  puts array
   end
+  new_array
 end
 
-super_fizzbuzz([1,2,3])
-super_fizzbuzz([1,2,5])
-super_fizzbuzz([1,2,15])
-
+ 
 
 
 # 4. Refactored Solution

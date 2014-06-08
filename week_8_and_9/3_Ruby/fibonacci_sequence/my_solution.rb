@@ -31,6 +31,7 @@ end
 
 
 # 3. Initial Solution
+
 =begin
 def is_fibonacci?(num)
     array = (0..num).to_a
@@ -53,6 +54,7 @@ end
 
 
 
+=begin
 def is_fibonacci?(num)
     array = (0..num).to_a
     fib = []
@@ -61,11 +63,27 @@ def is_fibonacci?(num)
             fib << array[index]
         end
     end
+    puts fib
     fib.include?(num)
+end
+=end
+
+def is_fibonacci?(num)
+  fib = [0,1]
+
+  while fib[-1] < num
+    fib << fib[-1] + fib[-2]
+  end
+
+  if fib[-1] == num
+    true
+  else 
+    false
+  end
 end
 
 
-puts is_fibonacci?(5)
+#puts is_fibonacci?(5)
 #puts is_fibonacci?(4)
 # 4. Refactored Solution
 
@@ -76,19 +94,19 @@ puts is_fibonacci?(5)
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-# def assert
-#     raise "Assertion failed!" unless yield
-# end
+ def assert
+     raise "Assertion failed!" unless yield
+ end
 
-# def random_fibonacci
-#     [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765,10946].sample
-# end
+ def random_fibonacci
+     [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765,10946].sample
+ end
 
-# assert {is_fibonacci?(random_fibonacci) == true}
+ assert {is_fibonacci?(random_fibonacci) == true}
 
-# assert {is_fibonacci?(8670007398507948658051921) == true}
-# assert {is_fibonacci?(random_fibonacci+100) == false}
-# assert {is_fibonacci?(927372692193078999171) == false}
+ assert {is_fibonacci?(8670007398507948658051921) == true}
+ assert {is_fibonacci?(random_fibonacci+100) == false}
+ assert {is_fibonacci?(927372692193078999171) == false}
 
 
 

@@ -12,10 +12,50 @@
 class Student
   attr_accessor :scores, :first_name
 
-  def initialize(args)   #Use named arguments!
-    #your code here
+  def initialize(first_name, scores)   #Use named arguments!
+    @scores = scores
+    @first_name = first_name
   end
+
+  def first_name
+  	@first_name
+  end
+
+  def average
+  	@scores.inject {|sum, n| sum + n}/@scores.length
+  end
+
+  def letter_grade
+  	case letter_grade
+  	  when @scores.inject {|sum, n| sum + n}/@scores.length >= 90
+  	  	"A"
+  	   when @scores.inject {|sum, n| sum + n}/@scores.length >= 80
+  	   	"B"
+  	   when @scores.inject {|sum, n| sum + n}/@scores.length >= 70
+  	    "C"
+  	   when @scores.inject {|sum, n| sum + n}/@scores.length >= 60
+  	   	"D"
+  	   else 
+  	   	"F"
+
+  	 end
+  end
+  
+  
+
 end
+
+  
+
+
+
+students = Array.new
+students[0] = Student.new("Alex",[100,100,100,0,100])
+students[1] = Student.new("Simon",[])
+students[2] = Student.new("John",[])
+students[3] = Student.new("Sam",[])
+students[4] = Student.new("Johnson",[])
+
 
 
 # 4. Refactored Solution

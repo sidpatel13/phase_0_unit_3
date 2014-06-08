@@ -75,11 +75,9 @@ def is_fibonacci?(num)
     fib << fib[-1] + fib[-2]
   end
 
-  if fib[-1] == num
-    true
-  else 
-    false
-  end
+
+  fib[-1] == num ? true: false
+
 end
 
 
